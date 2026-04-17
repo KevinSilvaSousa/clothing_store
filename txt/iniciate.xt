@@ -1,0 +1,3 @@
+venv/scripts/activate
+python manage.py runserver
+pip freeze > requirements.txt
