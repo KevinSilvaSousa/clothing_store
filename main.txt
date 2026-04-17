@@ -4,65 +4,11 @@ Para isso, você precisa utilizar o Django Rest Framework (DRF) para construir a
 
 Tarefas a serem executadas:
 
-1. Criar dos Models:
+4. Adicionar Autenticação e Permissões: Feito
 
-Crie os modelos de dados necessários para representar os principais recursos do e-commerce.
+5. Adicionar Filtros e Paginação: Feito
 
-Modelo de Produto:
-nome: Nome do produto. Campo obrigatório, com no máximo 255 caracteres.
-
-descricao: Descrição detalhada do produto. Campo opcional, com no máximo 1000 caracteres.
-
-preco: Preço do produto. Campo obrigatório, deve ser um número decimal positivo.
-
-quantidade_estoque: Quantidade disponível em estoque. Campo obrigatório, deve ser um número inteiro positivo.
-
-categoria: Chave estrangeira para o modelo Categoria. Campo obrigatório, deve ser uma categoria existente no sistema.
-
-imagem: Campo opcional para armazenar a URL da imagem do produto. Campo opcional, deve ser uma URL válida para uma imagem.
-
-criado_em: Data e hora de criação do produto. Campos automáticos gerados pelo sistema.
-
-atualizado_em: Data e hora da última atualização do produto. Campos automáticos gerados pelo sistema.
-
-Modelo de Categoria:
-
-nome: Nome da categoria. Campo obrigatório, com no máximo 100 caracteres.
-
-descricao: Descrição breve da categoria. Campo opcional, com no máximo 500 caracteres.
-
-criado_em: Data e hora de criação da categoria. Campos automáticos gerados pelo sistema.
-
-atualizado_em: Data e hora da última atualização da categoria. Campos automáticos gerados pelo sistema.
-
-==============================================================================================================================
-
-2. Adicionar Serialização:
-
-Implemente serializers para os modelos criados, garantindo que todos os campos sejam incluídos nas respostas da API.
-
-3. Criar os ViewSets e adicionar eles aos routers
-
-Implemente os ViewSets para cada modelo, capturando todos os objetos de modelo e indicando seu respectivo serializer. 
-Adicione os ViewSets aos routers para que eles possam ser acessados através das URLs da API.
-
-Além disso, você deve incluir a API Root nos routers para fornecer uma visão geral dos endpoints disponíveis na sua API.
-
-4. Adicionar Autenticação e Permissões:
-
-Utilize o Basic Authentication para autenticação dos usuários. Defina as permissões de acesso para os endpoints, 
-permitindo apenas que usuários autenticados realizem operações como criar, atualizar ou excluir recursos.
-
-5. Adicionar Filtros e Paginação:
-
-Implemente filtros de busca para permitir que os usuários pesquisem produtos por nome, categoria e preço. 
-Configure a paginação para garantir uma experiência de navegação suave, 
-especialmente ao lidar com grandes volumes de dados, permitindo 20 produtos por página.
-
-6. Indicar uma Limitação de Requisições:
-
-Utilize técnicas de throttling para limitar o número de requisições que um usuário pode fazer dentro de um determinado período de tempo, 
-evitando sobrecargas nos servidores. Permita 50 requisições por dia para usuários logados e 20 para usuários anônimos.
+6. Indicar uma Limitação de Requisições: Feito
 
 7. Documentar a API:
 
